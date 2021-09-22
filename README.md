@@ -4,12 +4,13 @@ This plugin is used to modify the surroundings which include (, [, {, <, ", ', a
 
 Examples (the asterisk * denotes the cursor position):
 
-  Old text                  Command     New text ~
-  This is a [sent*ence]     dsw         This is a sent*ence
-  "Hello *world!"           ds"         Hello *world!
-  This is a [sent*ence]     csw"        This is a "sent*ence"
-  {a+*b/(c-d)}              cs{(        (a+*b/(c-d))
-  This is a [sent*ence]     viwS"       This is a ["sent*ence"]
+| Old text | Command | New text |
+| --- | --- |
+|  This is a [sent*ence] | dsw | This is a sent*ence |
+|  "Hello *world!"       | ds" | Hello *world! |
+|  This is a [sent*ence] | csw" | This is a "sent*ence" |
+|  {a+*b/(c-d)}          | cs{( | (a+*b/(c-d)) |
+|  This is a [sent*ence] | viwS" | This is a ["sent*ence"] |
 
 ## MAPPINGS
 
