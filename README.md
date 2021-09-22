@@ -1,6 +1,6 @@
 # tiny-surround.vim
 
-Tiny-surroundings a super minimal plugin used to modify the "surroundings" which include (, \[, {, <, ", ', etc.
+This plugin is a super minimal plugin used to modify the "surroundings" which include (, \[, {, <, ", ', etc.
 
 Inspired by: https://github.com/tpope/vim-surround
 
