@@ -37,7 +37,7 @@ function! s:changesurround()
     execute ':normal! mXviwv`>"zp`<"xP`Xl'
 	else
 		let char = nr2char(getchar())
-		execut" ':normal! mXvi' . comchar . 'v`>lr' . s:surroundgetpair(char)[1] . '`<hr' . s:surroundgetpair(char)[0] . '`Xl'
+		execute ':normal! mXvi' . comchar . 'v`>lr' . s:surroundgetpair(char)[1] . '`<hr' . s:surroundgetpair(char)[0] . '`Xl'
 	endif
 	let @x = l:temp_x
 	let @z = l:temp_z
