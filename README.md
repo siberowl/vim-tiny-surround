@@ -14,9 +14,11 @@ Examples (the asterisk * denotes the cursor position):
 
 ## MAPPINGS
 
-Delete surroundings (normal mode): ds followed by w or a surroundings to delete
-Change surroundings (normal mode): cs followed by w or a surroundings to change
-Add surroundings (visual mode): S followed by a surroundings to add
+Delete surroundings (normal mode): *ds* followed by *w* or a surroundings to delete
+
+Change surroundings (normal mode): *cs* followed by *w* or a surroundings to change
+
+Add surroundings (visual mode): *S* followed by a surroundings to add
 
 ## OPTIONS
 
