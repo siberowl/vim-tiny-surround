@@ -12,6 +12,13 @@ Examples (the asterisk * denotes the cursor position):
 |  {a+\*b/(c-d)}          | cs{( | (a+\*b/(c-d)) |
 |  This is a \[sent\*ence] | viwS" | This is a \["sent\*ence"] |
 
+## INSTALATION
+
+Using vim-plug:
+```
+siberowl/vim-tiny-surround
+```
+
 ## MAPPINGS
 
 Delete surroundings (normal mode): *ds* followed by *w* or a surroundings to delete
