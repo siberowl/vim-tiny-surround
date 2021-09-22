@@ -1,3 +1,5 @@
+" tiny-surround.vim - Tiny Surround
+" Author:       Siberowl
 nnoremap <silent> <Plug>ChangeSurround :<C-U>call <SID>changesurround()<CR>
 nnoremap <silent> <Plug>DeleteSurround :<C-U>call <SID>deletesurround()<CR>
 vnoremap <silent> <Plug>AddSurround :<C-U>call <SID>addsurround()<CR>
