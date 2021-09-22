@@ -1,5 +1,12 @@
 nnoremap <silent> <Plug>ChangeSurround :<C-U>call <SID>changesurround()<CR>
 nnoremap <silent> <Plug>DeleteSurround :<C-U>call <SID>deletesurround()<CR>
+vnoremap <silent> <Plug>AddSurround :<C-U>call <SID>addsurround()<CR>
+
+if !exists("g:tiny_surround_no_mappings") || ! g:tiny_surround_no_mappings
+  nmap cs <Plug>ChangeSurround
+  nmap ds <Plug>DeleteSurround
+  xmap S <Plug>AddSurround
+endif
 
 "// {{{ Surround functions
 function! s:surroundgetpair(char)
