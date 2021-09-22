@@ -12,11 +12,11 @@ Examples (the asterisk * denotes the cursor position):
 |  {a+\*b/(c-d)}          | cs{( | (a+\*b/(c-d)) |
 |  This is a \[sent\*ence] | viwS" | This is a \["sent\*ence"] |
 
-## INSTALATION
+## INSTALLATION
 
-Using vim-plug:
+Using [vim-plug](https://github.com/junegunn/vim-plug):
 ```
-siberowl/vim-tiny-surround
+Plug 'siberowl/vim-tiny-surround'
 ```
 
 ## MAPPINGS
