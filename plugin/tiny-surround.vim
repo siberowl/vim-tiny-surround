@@ -43,9 +43,21 @@ function! s:deletesurround()
 	if comchar == 'w'
 		execute ':normal! mXviwv`>ldl`<hdl`Xh'
 	else
-		let char = comchar
 		execute ':normal! mXvi' . comchar . 'v`>ldl`<hdl`Xh'
 	endif
+	echo ''
+endfunction
+
+function! s:addsurround()
+  echo ''
+	let l:temp_x = @x
+	let l:temp_z = @z
+	let char = nr2char(getchar())
+  let @x = char 
+  let @z = s:surroundgetpair(char)
+	execute ':normal! mX`>"zp`<"xP`Xl'
+	let @x = l:temp_x
+	let @z = l:temp_z
 	echo ''
 endfunction
 "// }}}
