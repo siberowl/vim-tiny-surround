@@ -12,16 +12,16 @@ endif
 
 "// {{{ Surround functions
 function! s:surroundgetpair(char)
-	if a:char == '{'
-		return '}'
-	elseif a:char == '['
-		return ']'
-	elseif a:char == '('
-		return ')'
-	elseif a:char == '<'
-		return '>'
+	if a:char == '{' || a:char == '}'
+		return ['{', '}']
+	elseif a:char == '[' || a:char == ']'
+		return ['[', ']']
+	elseif a:char == '(' || a:char == ')'
+		return ['(', ')']
+	elseif a:char == '<' || a:char == '>'
+		return ['<', '>']
 	else
-		return a:char
+		return [a:char, a:char]
 	endif
 endfunction
 
@@ -32,14 +32,12 @@ function! s:changesurround()
 	let l:temp_z = @z
 	if comchar == 'w'
 		let char = nr2char(getchar())
-		let @x = char 
-		let @z = s:surroundgetpair(char)
+		let @x = s:surroundgetpair(char)[0]
+		let @z = s:surroundgetpair(char)[1]
     execute ':normal! mXviwv`>"zp`<"xP`Xl'
 	else
 		let char = nr2char(getchar())
-		let @x = char 
-		let @z = s:surroundgetpair(char)
-		execute ':normal! mXvi' . comchar . 'v`>lr' . s:surroundgetpair(char) . '`<hr' . char . '`Xl'
+		execut" ':normal! mXvi' . comchar . 'v`>lr' . s:surroundgetpair(char)[1] . '`<hr' . s:surroundgetpair(char)[0] . '`Xl'
 	endif
 	let @x = l:temp_x
 	let @z = l:temp_z
@@ -62,8 +60,8 @@ function! s:addsurround()
 	let l:temp_x = @x
 	let l:temp_z = @z
 	let char = nr2char(getchar())
-  let @x = char 
-  let @z = s:surroundgetpair(char)
+  let @x = s:surroundgetpair(char)[0]
+  let @z = s:surroundgetpair(char)[1]
 	execute ':normal! mX`>"zp`<"xP`Xl'
 	let @x = l:temp_x
 	let @z = l:temp_z
