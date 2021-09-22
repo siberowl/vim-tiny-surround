@@ -25,25 +25,27 @@ function! s:changesurround()
 		let char = nr2char(getchar())
 		let @x = char 
 		let @z = s:surroundgetpair(char)
-		execute ':normal! mXlbh"xpe"zp`X'
+    execute ':normal! mXviwv`>"zp`<"xP`Xl'
 	else
 		let char = nr2char(getchar())
 		let @x = char 
 		let @z = s:surroundgetpair(char)
-		execute ':normal! mXF' . comchar . 'r' . char . '`Xf' . s:surroundgetpair(comchar) . 'r' . s:surroundgetpair(char) . '`Xh'
+		execute ':normal! mXvi' . comchar . 'v`>lr' . s:surroundgetpair(char) . '`<hr' . char . '`Xl'
 	endif
 	let @x = l:temp_x
 	let @z = l:temp_z
 	echo ''
 endfunction
+
 function! s:deletesurround()
 	echo ''
 	let comchar = nr2char(getchar())
 	if comchar == 'w'
-		execute ':normal! mXlbdhwdl`Xh'
+		execute ':normal! mXviwv`>ldl`<hdl`Xh'
 	else
 		let char = comchar
-		execute ':normal! mXF' . char . 'dl`Xhf' . s:surroundgetpair(char) . 'dl`Xh'
+		execute ':normal! mXvi' . comchar . 'v`>ldl`<hdl`Xh'
 	endif
 	echo ''
 endfunction
+"// }}}
