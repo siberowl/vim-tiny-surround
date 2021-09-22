@@ -1,3 +1,7 @@
+nnoremap <silent> <Plug>ChangeSurround :<C-U>call <SID>changesurround()<CR>
+nnoremap <silent> <Plug>DeleteSurround :<C-U>call <SID>deletesurround()<CR>
+
+"// {{{ Surround functions
 function! s:surroundgetpair(char)
 	if a:char == '{'
 		return '}'
