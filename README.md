@@ -10,7 +10,7 @@ Examples (the asterisk * denotes the cursor position):
 | --- | --- | --- |
 |  This is a \[sent\*ence] | dsw | This is a sent\*ence |
 |  "Hello \*world!"       | ds" | Hello \*world! |
-|  This is a \[sent\*ence] | csw" | This is a "sent\*ence" |
+|  This is a sent\*ence | csw" | This is a "sent\*ence" |
 |  {a+\*b/(c-d)}          | cs{( | (a+\*b/(c-d)) |
 |  This is a \[sent\*ence] | viwS" | This is a \["sent\*ence"] |
 
