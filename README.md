@@ -1,6 +1,8 @@
 # tiny-surround.vim
 
-This plugin is used to modify the surroundings which include (, [, {, <, ", ', and anything supported by the vi command.
+This is super minimal plugin used to modify the surroundings which include (, \[, {, <, ", ', etc.
+
+Inspired by: https://github.com/tpope/vim-surround
 
 Examples (the asterisk * denotes the cursor position):
 
