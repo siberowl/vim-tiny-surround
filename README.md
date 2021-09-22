@@ -1,6 +1,6 @@
 # tiny-surround.vim
 
-This is a super minimal plugin used to modify the surroundings which include (, \[, {, <, ", ', etc.
+Tiny-surroundings a super minimal plugin used to modify the "surroundings" which include (, \[, {, <, ", ', etc.
 
 Inspired by: https://github.com/tpope/vim-surround
 
@@ -11,7 +11,7 @@ Examples (the asterisk * denotes the cursor position):
 |  This is a \[sent\*ence] | dsw | This is a sent\*ence |
 |  "Hello \*world!"       | ds" | Hello \*world! |
 |  This is a sent\*ence | csw" | This is a "sent\*ence" |
-|  {a+\*b/(c-d)}          | cs{( | (a+\*b/(c-d)) |
+|  (a+\*b/(c-d))          | cs({ | {a+\*b/(c-d)} |
 |  This is a \[sent\*ence] | viwS" | This is a \["sent\*ence"] |
 
 ## INSTALLATION
@@ -23,11 +23,11 @@ Plug 'siberowl/vim-tiny-surround'
 
 ## MAPPINGS
 
-Delete surroundings (normal mode): *ds* followed by *w* or a surroundings to delete
+Delete surroundings (normal mode): *ds* followed by *w* or a "surroundings" to delete
 
-Change surroundings (normal mode): *cs* followed by *w* or a surroundings to change
+Change surroundings (normal mode): *cs* followed by *w* or a "surroundings" to change followed by the new "surroundings".
 
-Add surroundings (visual mode): *S* followed by a surroundings to add
+Add surroundings (visual mode): *S* followed by a "surroundings" to add
 
 ## OPTIONS
 
