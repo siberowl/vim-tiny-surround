@@ -37,3 +37,7 @@ To turn off mappings:
 ```
 let g:tiny_surround_no_mappings = "true"
 ```
+
+## CONTRIBUTION
+
+Contributions are welcome! Just submit an issue for a bug or a PR for a fix/new feature and I'll check it out.
