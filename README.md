@@ -4,6 +4,8 @@ This is a super minimal plugin used to modify the "surroundings" which include (
 
 Inspired by: https://github.com/tpope/vim-surround
 
+Unlike vim-surround, vim-tiny-surround aims to be as analogous as possible to the existing inner command and should be intuitive for anyone familiar with it.
+
 Examples (the asterisk * denotes the cursor position):
 
 | Old text | Command | New text |
