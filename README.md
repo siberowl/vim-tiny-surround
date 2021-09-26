@@ -1,20 +1,19 @@
 # tiny-surround.vim
 
-This is a super minimal plugin used to modify the "surroundings" which include (, \[, {, <, ", ', etc.
+A minimalist plugin for modifying the surroundings that works just like the native inner commands.
 
-Inspired by: https://github.com/tpope/vim-surround
-
-Unlike vim-surround, vim-tiny-surround aims to be as analogous as possible to the existing inner command while staying simple and extremely lightweight (less than 2kb of code) .
-
-Examples (the asterisk * denotes the cursor position):
+## EXAMPLES (the asterisk * denotes the cursor position)
 
 | Old text | Command | New text |
 | --- | --- | --- |
 |  This is a \[sent\*ence] | dsw | This is a sent\*ence |
-|  "Hello \*world!"       | ds" | Hello \*world! |
+|  "This is a sent\*ence"       | ds" | This is a sent\*ence |
 |  This is a sent\*ence | csw" | This is a "sent\*ence" |
 |  (a+\*b/(c-d))          | cs({ | {a+\*b/(c-d)} |
-|  This is a \[sent\*ence] | viwS" | This is a \["sent\*ence"] |
+| block(() => {<br>&nbsp;&nbsp;if (isBlock) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return "this is* a block";<br>&nbsp;&nbsp;}<br>  }); | csb{ | block{() => {<br>&nbsp;&nbsp;if (isBlock) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return "this is* a block";<br>&nbsp;&nbsp;}<br>  }}; |
+|  This is a \[sent\*ence] | vawS( | This is a (\[sent\*ence]) |
+
+Refer to `:help text-object` for all the commands supported (replacing the `i`'s and `a`'s with `s`).
 
 ## INSTALLATION
 
@@ -25,11 +24,11 @@ Plug 'siberowl/vim-tiny-surround'
 
 ## MAPPINGS
 
-Delete surroundings (normal mode): *ds* followed by *w* or a "surroundings" to delete
-
-Change surroundings (normal mode): *cs* followed by *w* or a "surroundings" to change followed by the new "surroundings".
-
-Add surroundings (visual mode): *S* followed by a "surroundings" to add
+| Command | Mapping | Usage |
+| --- | --- | --- |
+| `<Plug>DeleteSurround` | `nmap ds <Plug>DeleteSurround` | Delete the surroundings in normal mode |
+| `<Plug>ChangeSurround` | `nmap cs <Plug>ChangeSurround` | Change or replace the surroundings in normal mode |
+| `<Plug>AddSurround` | `xmap S <Plug>AddSurround` | Add a surroundings in visual mode |
 
 ## OPTIONS
 
